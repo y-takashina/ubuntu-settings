@@ -20,9 +20,9 @@ set -g terminal-overrides 'xterm:colors=256'
 
 Vim 設定やバックアップファイル用のディレクトリを作成
 
-###bash
+```bash
 $ mkdir ~/.vim
-###
+```
 
 .vimrc に以下のように設定
 
