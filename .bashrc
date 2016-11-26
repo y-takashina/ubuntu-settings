@@ -113,8 +113,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval `dircolors ~/.dir_colors`
+
+# user setting
 umask 0002
+
+eval `dircolors ~/.dir_colors`
 
 
 
