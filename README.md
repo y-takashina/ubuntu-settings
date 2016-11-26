@@ -19,6 +19,21 @@ Vim 設定やバックアップファイル用のディレクトリを作成
 $ mkdir ~/.vim
 ```
 
+## Solarized の設定
+- Pathogen のインストール
+
+```bash
+$ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+$ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
+- Solarized を .vim ディレクトリに移す
+
+```bash
+$ git clone git://github.com/altercation/vim-colors-solarized.git
+$ mv vim-colors-solarized ~/.vim/bundle/
+```
+
 ## umask の確認
 デフォルトで作られるファイルやディレクトリの権限を 755 にしたいがデフォルトだと 777 になっている。
 
