@@ -30,7 +30,7 @@ $ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 - Solarized を .vim ディレクトリに移す
 
 ```bash
-$ git clone git://github.com/altercation/vim-colors-solarized.git
+$ git clone https://github.com/altercation/vim-colors-solarized.git
 $ mv vim-colors-solarized ~/.vim/bundle/
 ```
 
