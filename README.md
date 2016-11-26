@@ -73,9 +73,14 @@ augroup END
 ```bash
 $ umask      # umask の確認
 0000
-$ umask 0002 # umask の設定
 ```
 
+.bashrc に以下の設定を追加。
+
+```
+eval `dircolors ~/.dir_colors`
+umask 0002
+```
 
 
 
