@@ -1,87 +1,40 @@
 # ubuntu-settings
 自分用の Ubuntu セットアップの流れまとめ。
 
-## Solarized を入れる
-
-?
-
 ## tmux の設定
-
-Vim で ESC しようとすると少し時間が空くのでそれを直す。
-
-```
-set -s escape-time 0
-
-set-option -g default-terminal screen-256color
-set -g terminal-overrides 'xterm:colors=256'
-```
+このリポジトリにある .tmux.conf をホームディレクトリに移す。
 
 ## Vim の設定
-
 Vim 設定やバックアップファイル用のディレクトリを作成
 
 ```bash
 $ mkdir ~/.vim
 ```
 
-.vimrc に以下のように設定
+このリポジトリにある .vimrc をホームディレクトリに移す。
 
-```
-syntax enable
-"filetype plugin indent on
+## .bashrc の設定
 
-set number
-set autoindent
-set expandtab
-set smartindent
-set smarttab
-set tabstop=4
-set shiftwidth=4
-
-set textwidth=0
-set nowrap
-
-set backupdir=~/.vim
-set directory=~/.vim
-
-set showmatch
-set hidden
-
-hi Comment ctermfg=gray
-
-execute pathogen#infect()
-set background=dark
-colorscheme solarized
-
-augroup BinaryXXD
-  autocmd!
-  autocmd BufReadPre  *.bin let &binary =1
-  autocmd BufReadPost * if &binary | silent %!xxd -g 1
-  autocmd BufReadPost * set ft=xxd | endif
-  autocmd BufWritePre * if &binary | %!xxd -r | endif
-  autocmd BufWritePost * if &binary | silent %!xxd -g 1
-  autocmd BufWritePost * set nomod | endif
-augroup END
-```
+このリポジトリの .bashrc をそのまま移してもよい気がするが、
+互換性が気になる場合は下のほうの部分だけ追記する。
 
 
-### Vim に Solarized を反映
-
-## umask の設定
-デフォルトで作られるファイルやディレクトリの権限を 755 にする。
+# 逆引き
+## umask の確認
+デフォルトで作られるファイルやディレクトリの権限を 755 にしたいがデフォルトだと 777 になっている。
 
 ```bash
-$ umask      # umask の確認
+$ umask
 0000
 ```
 
-.bashrc に以下の設定を追加。
 
-```
-eval `dircolors ~/.dir_colors`
-umask 0002
-```
 
+# やっていること
+- Vim の設定
+- umask の設定
+- Solarized の導入
+- tmux の設定
 
 
 
