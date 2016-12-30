@@ -49,5 +49,8 @@ $ umask
 - Solarized の導入
 - tmux の設定
 
+## tmux の設定
+下の二つから持ってきている
 
-
+- 色: https://github.com/seebi/tmux-colors-solarized
+- 設定: http://qiita.com/b4b4r07/items/01359e8a3066d1c37edc
