@@ -119,6 +119,7 @@ umask 0002
 
 eval `dircolors ~/.dir_colors`
 
+alias datascienv='source /home/ytakashina/datasci/bin/activate'
 
 
 
